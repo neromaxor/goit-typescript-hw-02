@@ -2,14 +2,14 @@ type Page = {
   title: string;
   likes: number;
   accounts: string[];
-  status: string;
+  status: "open" | "close";
   details?: {
     createAt: Date;
-    updateAt?: Date;
+    updateAt: Date;
   };
 };
 
-const page1: Page = {
+const page1 = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
@@ -20,9 +20,11 @@ const page1: Page = {
   },
 };
 
-const page2: Page = {
+const page2 = {
   title: "Python or Js",
   likes: 5,
   accounts: ["Alex"],
   status: "close",
 };
+
+export {};
